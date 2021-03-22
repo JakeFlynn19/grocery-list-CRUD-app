@@ -11,7 +11,7 @@
         <tr>
           <th>Item</th>
           <th>Category</th>
-          <th></th>
+          <th>Remove</th>
         </tr>
       </thead>
       <tbody>
@@ -19,11 +19,17 @@
           <tr>
             <td><%= g.item %></td>
             <td><%= g.category %></td>
-            <td><a href="/groceries/<%= g._id %>">DETAILS</a></td>
+            <td></td>
           </tr>
           <% }); %>
         </tbody>
       </table>
-    <h4><a href="/groceries/new">Add More Groceries</a></h4>
+      <div class='row'>
+    <h4><a href="/beverages">Beverages</a>
+    <a href="/groceries/new">Dairy</a>
+    <a href="/groceries/new">Meat</a>
+    <a href="/groceries/new">Produce</a>
+   <a href="/groceries/new">Snacks</a></h4>
+    </div>
   </body>
 </html>
