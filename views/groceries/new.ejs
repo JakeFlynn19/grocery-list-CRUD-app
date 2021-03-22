@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Groceries</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+</head>
+<body>
+    <h2>Enter a New Item</h2>
+    <form action="/groceries" method="POST">
+        <label>Item:
+          <input type="text" name="item">
+        </label><br>
+        <label>Category:
+            <select name="category">
+                <option value="Beverages">Beverages</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Meat">Meat</option>
+                <option value="Produce">Produce</option>
+                <option value="Snacks">Snacks</option>
+            </select>
+        </label><br>
+        <input type="submit" value="Add Item">
+    </form>
+</body>
+</html>
