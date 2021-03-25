@@ -1,5 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+
 * {
+    padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica;
+    font-family: 'PT Sans', sans-serif;;
     color: #424748;
+  }
+
+  body {
+    max-width: 1024px;
+    margin: auto;
+    text-align: center;
+  }
+
+  #list {
+    max-width: 1024px;
+    margin: auto;
+    text-align: center;
+  }
+
+  table {
+    border-spacing: 0px;
+    width: 65%;
+    border-bottom: 1px solid black;
+  }
+
+  th {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  td, th {
+    padding: 3px;
+  }
+
+  .top {
+    padding: 20px;
+  }
+
+  a {
+    padding: 12px;
+  }
+
+  .first {
+    padding-bottom: 1px;
+  }
+
+  .fixed {
+    height: 100%;
+    overflow-y: auto;
   }

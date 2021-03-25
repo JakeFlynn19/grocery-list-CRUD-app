@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Edit a Todo | Express Todos</title>
+</head>
+
+<body>
+    <h1>Edit: <%= grocery.item %>
+    </h1>
+    <form action="/groceries/<%= grocery._id %>?_method=PUT" method="POST" autocomplete="off">
+        <label>Item:
+            <input type="text" name="item" value="<%= grocery.item %>">
+        </label>
+        <label>Category:
+            <select name="category">
+                <option value="beverages" <% if(grocery.category==="beverages" ) { %> selected <% } %> >Beverages</option>
+                <option value="dairy" <% if(grocery.category==="dairy" ) { %> selected <% } %> >Dairy</option>
+                <option value="meat" <% if(grocery.category==="meat" ) { %> selected <% } %> >Meat</option>
+                <option value="produce" <% if(grocery.category==="produce" ) { %> selected <% } %> >Produce</option>
+                <option value="snacks" <% if(grocery.category==="snacks" ) { %> selected <% } %> >Snacks</option>
+                <option value="spirits" <% if(grocery.category==="spirits" ) { %> selected <% } %> >Spirits</option>
+                <option value="frozen" <% if(grocery.category==="frozen" ) { %> selected <% } %> >Frozen</option>
+                <option value="personal care" <% if(grocery.category==="personal care" ) { %> selected <% } %> >Personal Care</option>
+                <option value="breakfast" <% if(grocery.category==="breakfast" ) { %> selected <% } %> >Breakfast</option>
+                <option value="miscellaneous" <% if(grocery.category==="miscellaneous" ) { %> selected <% } %> >Miscellaneous</option>
+            </select>
+        </label>
+        <label>Quantity:
+            <input type="number" name="quantity" value="<%= grocery.quantity %>">
+        </label>
+        <button type="submit">Update Item</button>
+    </form>
+</body>
+
+</html>

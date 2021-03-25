@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const groceries = require('../controllers/groceries');
 const Schema = mongoose.Schema;
 
 
@@ -8,8 +9,12 @@ const grocerySchema = new Schema({
 	},
 	category: {
 		type: String,
-        enum: [ 'Beverages', 'Dairy', 'Meat', ' Produce', 'Snacks' ]
+        enum: [ 'beverages', 'dairy', 'meat', 'produce', 'snacks', 'spirits', 'frozen', 'personal care', 'breakfast', 'miscellaneous' ]
 	},
+
+	quantity: {
+		type: Number,
+	}
 });
 
 

@@ -6,29 +6,76 @@
   </head>
   <body>
     <h2>Grocery List</h2>
+    <form class="top" action="/groceries" method="POST">
+      <label>Item:
+        <input type="text" name="item">
+      </label>
+      <label>Category:
+          <select name="category">
+              <option value="beverages">Beverages</option>
+              <option value="dairy">Dairy</option>
+              <option value="meat">Meat</option>
+              <option value="produce">Produce</option>
+              <option value="snacks">Snacks</option>
+              <option value="spirits">Spirits</option>
+              <option value="frozen">Frozen</option>
+              <option value="personal care">Personal Care</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="miscellaneous">Miscellaneous</option>
+          </select>
+      </label>
+      <label>Quantity:
+          <input type="number" name="quantity">
+      </label>
+      <input type="submit" value="Add Item">
+  </form>
+
+  <div class="fixed">
     <table id="list">
       <thead>
         <tr>
           <th>Item</th>
           <th>Category</th>
+          <th>Quantity</th>
+          <th>Edit</th>
           <th>Remove</th>
         </tr>
       </thead>
       <tbody>
-        <% groceries.forEach(function(g) { %>
+        <% groceries.forEach(function(g, idx) { %>
           <tr>
-            <td><%= g.item %></td>
+            <td><a href="https://www.kroger.com/search?query=<%= g.item %>&searchType=default_search&fulfillment=all" target="blank"><%= g.item %></a></td>
             <td><%= g.category %></td>
-            <td></td>
+            <td><%= g.quantity %></td>
+            <td>
+              <a href="/groceries/<%= g._id %>/edit">Edit</a>
+            </td>
+            <td>
+              <form action="/groceries/<%= g._id %>?_method=DELETE"
+              class="delete-form"
+              method="POST">
+              <button type="submit" name="_method">X</button>
+            </form>
+          </td>
           </tr>
           <% }); %>
         </tbody>
       </table>
-    <h4><a href="/beverages">Beverages</a>
-    <a href="/dairy">Dairy</a>
-    <a href="/meat">Meat</a>
-    <a href="/produce">Produce</a>
-   <a href="/snacks">Snacks</a></h4>
-   <h4><a href="/groceries/new">Add Groceries</a></h4>
+    </div>
+    <h4 class="first">
+    <a href="/categories/beverages">Beverages</a>
+    <a href="/categories/dairy">Dairy</a>
+    <a href="/categories/meat">Meat</a>
+    <a href="/categories/produce">Produce</a>
+    <a href="/categories/snacks">Snacks</a>
+    </h4>
+    <h4 class="second">
+    <a href="/categories/spirits">Spirits</a>
+    <a href="/categories/frozen">Frozen</a>
+    <a href="/categories/personal care">Personal Care</a>
+    <a href="/categories/breakfast">Breakfast</a>
+    <a href="/categories/miscellaneous">Miscellaneous</a>
+  </h4>
+   <!-- <h4><a href="/groceries/new">Add Groceries</a></h4> -->
   </body>
 </html>

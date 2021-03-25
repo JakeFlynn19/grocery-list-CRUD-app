@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-    process.env.DATABASE_URL,
+    "mongodb+srv://admin:1234@cluster0.1gq2e.mongodb.net/grocery-list?retryWrites=true&w=majority",
     {
         useNewUrlParser: true,
         useCreateIndex: true,
