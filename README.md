@@ -1,6 +1,6 @@
 # Grocery List CRUD App
 
-Visit my site [here] (https://grocery-list-crud-app.herokuapp.com/groceries)
+Visit my site here (https://grocery-list-crud-app.herokuapp.com/groceries)
 
 ## Technologies Used
 
@@ -13,6 +13,9 @@ Visit my site [here] (https://grocery-list-crud-app.herokuapp.com/groceries)
 - Heroku
 
 ## Screenshots
+
+![Screen Shot 2021-03-25 at 9 42 21 PM](https://user-images.githubusercontent.com/78702792/112566718-e37ab980-8db5-11eb-8d90-11b5a16f77d0.png)
+
 
 ## Future Enhancements
 
