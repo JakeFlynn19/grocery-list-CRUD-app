@@ -12,7 +12,7 @@
     max-width: 1024px;
     margin: auto;
     text-align: center;
-    background-color: #eedfde;
+    background-color: #eedfde
   }
 
   #list {
@@ -51,7 +51,7 @@
     padding-bottom: 1px;
   }
 
-  /* .fixed {
-    height: 100%;
-    overflow-y: auto;
-  } */
+  .fixed {
+    height: 72vh;
+    overflow: auto;
+  }
