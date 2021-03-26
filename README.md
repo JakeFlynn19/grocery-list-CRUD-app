@@ -1,5 +1,7 @@
 # Grocery List CRUD App
 
+An application to create a simple grocery list
+
 Visit my site here (https://grocery-list-crud-app.herokuapp.com/groceries)
 
 ## Technologies Used
